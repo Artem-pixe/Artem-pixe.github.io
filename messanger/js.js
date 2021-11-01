@@ -1,13 +1,15 @@
-document.getElementById("submit").addEventListener("click", function messageW() {
-    let messageText = document.getElementById("link").value;
-    let window = document.getElementById("window");
+const submit = document.getElementById("submit");
 
-    window.insertAdjacentHTML("beforeend", `<div class="message"> ${messageText} </div>`);
+submit.addEventListener("click", messageW = () => {
+    let messageText = document.getElementById("link").value;
+    let messengerDisplay = document.getElementById("messengerDisplay");
+
+    messengerDisplay.insertAdjacentHTML("beforeend", `<div class="message"> ${messageText} </div>`);
     
     console.log(messageText);
 });
 
-document.getElementById("submit").addEventListener("mousedown", function mouseDown() {
+submit.addEventListener("mousedown", mouseDown = () => {
     let submit = document.getElementsByClassName("messageSubmit");
     submit = document.getElementsByClassName("messageSubmitMousedown");
     console.log("hi boy")
